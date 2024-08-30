@@ -1,3 +1,5 @@
-# Ethan Blanco, first programming project
+import random
 
-print("This is a test project")
+num = random.randit(1, 20)
+
+print("Hello Ms. LaRose!")
