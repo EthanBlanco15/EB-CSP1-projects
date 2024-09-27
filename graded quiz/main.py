@@ -8,10 +8,15 @@ seven = input("Is seven a lucky number? ")
 
 score = 0
 
-if mars == "no" : + 1
-if heart == "yes" : + 1
-if english == "yes" : + 1
-if question == "yes" : + 1
-if seven == "yes" : + 1
+if mars == "no" : 
+    score += 1
+if heart == "yes" : 
+    score += 1
+if english == "yes" : 
+    score += 1
+if question == "yes" : 
+    score += 1
+if seven == "yes" : 
+    score += 1
 
 print(score)
