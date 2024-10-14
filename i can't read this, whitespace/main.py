@@ -1,7 +1,8 @@
 #Ethan Blanco, ProficiencyTest: I Can't Read This!
 
 import random
-def display_intro():print("Welcome to the Mystic Forest Adventure!")
+def display_intro():
+    print("Welcome to the Mystic Forest Adventure!")
 print("You find yourself at the edge of a dark, mysterious forest.")
 print("Your goal is to find the hidden treasure and escape safely.")
 def make_choice(options):
@@ -57,12 +58,13 @@ def play_game():
                 print("No treasure here. Keep searching!")
         elif choice==3:
             if face_challenge():
-                if random.random()<0.4:find_treasure()
+                if random.random()<0.4:
+                    find_treasure()
             treasure_found=True
         elif choice==4:
             print("You decide to leave the forest. Game over!")
         return
-        if treasure_found:
+    if treasure_found:
             print("Congratulations! You've won the game!")
-        if __name__=="__main__":
+if __name__=="__main__":
             play_game()
