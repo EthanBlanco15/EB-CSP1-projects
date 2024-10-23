@@ -20,7 +20,7 @@ def make_choice(options):
         except ValueError:
             print("Please enter a number.")
 
-def explore_forest(events):
+def explore_forest():
     print("You venture deeper into the forest...")
     events=["You encounter a friendly woodland creature.","You find a shimmering portal.","You discover an ancient ruins.","You come across a bubbling stream."]
     print(random.choice(events))
@@ -40,7 +40,7 @@ def face_challenge():
     
     else:
         print("You fail to overcome the challenge.")
-    return False
+        return False
 
 def play_game():
     display_intro()
@@ -49,7 +49,7 @@ def play_game():
         print("\n What would you like to do?")
         choice=make_choice(["Explore the forest","Search for treasure","Face a challenge","Exit the forest"])
         if choice==1:
-            explore_forest(play_game)
+             explore_forest()
         elif choice==2:
             if random.random()<0.3:
                 find_treasure()
@@ -60,10 +60,10 @@ def play_game():
             if face_challenge():
                 if random.random()<0.4:
                     find_treasure()
-            treasure_found=True
+                    treasure_found=True
         elif choice==4:
-                        print("You decide to leave the forest. Game over!")
-        return
+            print("You decide to leave the forest. Game over!")
+            return
     if treasure_found:
         print("Congratulations! You've won the game!")
 if __name__=="__main__":
