@@ -3,11 +3,12 @@
 import random
 def display_intro():
     print("Welcome to the Mystic Forest Adventure!")
-print("You find yourself at the edge of a dark, mysterious forest.")
-print("Your goal is to find the hidden treasure and escape safely.")
+    print("You find yourself at the edge of a dark, mysterious forest.")
+    print("Your goal is to find the hidden treasure and escape safely.")
+
 def make_choice(options):
     for i,option in enumerate(options,1):
-        print(f"{i}. {option}")
+        print(f"{i}.{option}")
     while True:
         try:
             choice=int(input("Enter your choice: "))
@@ -19,11 +20,10 @@ def make_choice(options):
         except ValueError:
             print("Please enter a number.")
 
-def explore_forest():
-        print("You venture deeper into the forest...")
-events=["You encounter a friendly woodland creature.","You find a shimmering portal.","You discover an ancient ruins.","You come across a bubbling stream."]
-
-print(random.choice(events))
+def explore_forest(events):
+    print("You venture deeper into the forest...")
+    events=["You encounter a friendly woodland creature.","You find a shimmering portal.","You discover an ancient ruins.","You come across a bubbling stream."]
+    print(random.choice(events))
 
 def find_treasure():
 
@@ -49,7 +49,7 @@ def play_game():
         print("\n What would you like to do?")
         choice=make_choice(["Explore the forest","Search for treasure","Face a challenge","Exit the forest"])
         if choice==1:
-            explore_forest()
+            explore_forest(play_game)
         elif choice==2:
             if random.random()<0.3:
                 find_treasure()
@@ -62,9 +62,9 @@ def play_game():
                     find_treasure()
             treasure_found=True
         elif choice==4:
-            print("You decide to leave the forest. Game over!")
+                        print("You decide to leave the forest. Game over!")
         return
     if treasure_found:
-            print("Congratulations! You've won the game!")
+        print("Congratulations! You've won the game!")
 if __name__=="__main__":
-            play_game()
+    play_game()
