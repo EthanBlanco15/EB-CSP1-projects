@@ -10,4 +10,4 @@ def converter(code, cypher):
         cypher += letter #Adding the empty string and function of chr and ord.
     print(cypher) # We left the print function here, but made the identation less to not include everything.
 
-converter(code, cypher) 
+converter(code, cypher)
