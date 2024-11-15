@@ -1,6 +1,6 @@
 #Ethan Blanco, ProficiencyTest: Secret Cypher
 
-code =input("What would you like your code to be? Please input an available word.\n ")
+code = input("What would you like your code to be? Please input an available word.\n ")
 cypher = "" # Empty string
 def converter(code, cypher):
     for letter in code: # Normally, ord and chr functions only take one identation, but with the for loop, it takes it letter by letter.
