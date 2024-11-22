@@ -12,7 +12,7 @@ while True:
     except:
         print("Wrong input")
         continue
-    if action =="1":
+    if action ==1:
         print("Bye bye!")
         break
     try:
@@ -49,4 +49,4 @@ while True:
         print("Tie!")
     else:
         print("This doesn't work... Maybe try something else")
-        break
+        continue
