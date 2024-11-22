@@ -3,21 +3,29 @@ import random
 while True:
     pChoice = 1
     cChoice = 2
-    action = input("""What would you like to do?
+    try:        
+        action = int(input("""What would you like to do?
 
         Enter 1 to leave
 
-        Type anything to play/continue:\n""")
+        Type any other number than 1 to play/continue:\n"""))
+    except:
+        print("Wrong input")
+        continue
     if action =="1":
         print("Bye bye!")
         break
-    new_action = input("""Let's play! Rock, paper or scissors?
+    try:
+        new_action = input("""Let's play! Rock, paper or scissors?
                            
         Enter 1 to play ROCK              
         
         Enter 2 to play PAPER                   
                             
         Enter 3 to play SCISSORS\n""")
+    except:
+        print("Invalid input")
+        continue
     
     cChoice = str(random.randint(1, 3))
     print("Computer choice is", cChoice)
