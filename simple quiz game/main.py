@@ -1,4 +1,11 @@
 #Ethan Blanco, ProficiencyTest: Simple Quiz Game
+def score():
+
+    print("")
+    
+def logic():
+
+    print("")
 Tscore = 0
 game = input("""1. Who is the better Protagonist out of the list? Multiple Choice
                 A. Kakarot/Son Goku
