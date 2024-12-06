@@ -27,4 +27,4 @@ for row in grid: #This for loop is grabbing a random new variable the computer n
             d += 1
         if spot == "E":
             e += 1
-    print("There are", a, "amount of A's,", b, "amount of B's", c, "amount of C's,", d, "amount of D's and", e, "amount of E's \n")
+    print(f"There are {a} amount of A's, {b} amount of B's, {c} amount of C's, {d} amount of D's and {e} amount of E's \n")

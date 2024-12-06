@@ -32,6 +32,12 @@ def Check():
     if grid1[0][0] ==comp_ and grid1[1][1]==comp_ and grid1[2][2]==comp_:
         End = True
         print("Computer wins!")
+    if grid1[2][0] ==ticTacToeGame and grid1[1][1]==ticTacToeGame and grid1[0][2]==ticTacToeGame:
+        End = True
+        print("Player wins!")
+    if grid1[2][0] ==comp_ and grid1[1][1]==comp_ and grid1[0][2]==comp_:
+        End = True
+        print("Computer wins!")
 
     # Player column
     xColumn = 0
@@ -134,6 +140,11 @@ while True:
             comp_ = "x"
             
         while True:
+            for row in grid1:
+                print(row)
+            Check()
+            if End == True:
+                break
             try:
                 pChoice = int(input("""Let's start!
                         Where would you like to place your spot in the grid?
@@ -141,18 +152,14 @@ while True:
             except:
                 print("This doesn't work")
                 continue
-            for row in grid1:
-                print(row)
-            Check()
-            if End == True:
-                break
             for rowIndex, row in enumerate(grid1):
                 for spotIndex, spot in enumerate(row):
                     if spot == pChoice: # Capital O's numerical value is 79, and X is 88
                         grid1[rowIndex][spotIndex] = ticTacToeGame
-            print("")
+            
             for row in grid1:
                 print(row)
+            print("")
             Check()
             if End == True:
                 break
